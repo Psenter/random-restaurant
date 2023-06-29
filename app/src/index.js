@@ -15,6 +15,8 @@ root.render(
   <React.StrictMode>
     <Header />
     <Navbar />
+    <Appetizers />
+    <Lunch />
     <Dinner />
   </React.StrictMode>
 );
