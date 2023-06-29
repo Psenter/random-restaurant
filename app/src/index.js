@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./styles.css";
 import Header from './routes/Header';
+import Appetizers from './routes/Appetizers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <Appetizers />
   </React.StrictMode>
 );
