@@ -1,0 +1,16 @@
+body {
+    background-color: #111111;
+}
+
+.small-icon {
+    width: auto;
+    height: 300px;
+}
+
+.heading {
+    background-color: #cbeaf0;
+}
+
+.text-color {
+    color: #cbeaf0;
+}
