@@ -22,7 +22,7 @@ export default function Appetizers() {
   //returns the displayed data
   return (
     <>
-      <h1 className="text-center text-color-lb pt-5">Appetizer</h1>
+      <h1 className="text-center text-color-lb pt-5">Appetizers</h1>
       <div className="row">
         {/* maps through the data array and puts it into divs */}
         {appItems.map((item) => (
