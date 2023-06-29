@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-lightblue">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand">
       </a>
       <button
         class="navbar-toggler"
@@ -15,45 +15,26 @@ export default function Navbar() {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
+        <ul class="navbar-nav border-bottom border-dark text-dark">
+          <li class="nav-item active ps-2 pe-2">
+            <a class="nav-link text-dark">
+              Home
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Features
+          <li class="nav-item ps-2 pe-2">
+            <a class="nav-link text-dark">
+              Appetizers
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Pricing
+          <li class="nav-item ps-2 pe-2">
+            <a class="nav-link text-dark">
+              Lunch
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown link
+          <li class="nav-item ps-2 pe-2">
+            <a class="nav-link text-dark">
+              Dinner
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
-                Another action
-              </a>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
           </li>
         </ul>
       </div>
