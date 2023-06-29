@@ -1,31 +1,43 @@
-import React, { useEffect, useState } from 'react';
-import { getData } from '../utils/data';
-import { getLocalStorage, setLocalStorage } from '../utils/localStorage';
+//imports what I need
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
+//exports my function
 export default function Appetizers() {
-    useEffect(() => {
-        let data = getData;
-        console.log(data);
-    }, []);
+  //sets state to the data
+  const [appetizers, setAppetizers] = useState([]);
 
-    return (
-        <div className='container text-center text-color'>
-            <h2>Appetizers</h2>
-            <div className='row'>
-                <div className='col'>asdf</div>
-                <div className='col'>asdf</div>
-                <div className='col'>asfd</div>
-            </div>
-            <div className='row'>
-                <div className='col'>asdf</div>
-                <div className='col'>asdf</div>
-                <div className='col'>asdf</div>
-            </div>
-            <div className='row'>
-                <div className='col'>asfd</div>
-                <div className='col'>asdf</div>
-                <div className='col'>asdf</div>
-            </div>
-        </div>
-    );
+  
+  useEffect(() => {
+    //makes the call to the API
+    axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
+      //sets setAppetizers to the data from API
+      setAppetizers(response.data);
+    });
+  }, []);
+
+  //filters out all data that isnt 
+  const appItems = appetizers.filter((item) => item.category === "Appetizer");
+
+  //returns the displayed data
+  return (
+    <>
+      <h1 className="text-center text-color-lb pt-5">Appetizer</h1>
+      <div className="row">
+        {/* maps through the data array and puts it into divs */}
+        {appItems.map((item) => (
+          <div
+            key={item.id}
+            className="col-6 text-center text-color-lb pt-5 ps-5 pe-5"
+          >
+            <h2 className="card-title">{item.title}</h2>
+            <h4>Category: {item.category}</h4>
+            <h5>Description: {item.description}</h5>
+            <h6>{item.price}</h6>
+            <br />
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
