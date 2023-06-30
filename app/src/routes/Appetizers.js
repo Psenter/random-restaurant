@@ -30,9 +30,9 @@ export default function Appetizers() {
             className="col-6 text-center text-color-lb pt-5 ps-5 pe-5"
           >
             <h2 className="card-title">{item.title}</h2>
-            <h4>Category: {item.category}</h4>
-            <h5>Description: {item.description}</h5>
-            <h6>{item.price}</h6>
+            <div>Category: {item.category}</div>
+            <div>Description: {item.description}</div>
+            <div>{item.price}</div>
             <br />
           </div>
         ))}
