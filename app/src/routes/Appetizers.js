@@ -4,10 +4,9 @@ import axios from "axios";
 
 //exports my function
 export default function Appetizers() {
-  //sets state to the data
+  //sets state to show the appetizer data
   const [appetizers, setAppetizers] = useState([]);
 
-  
   useEffect(() => {
     //makes the call to the API
     axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
@@ -16,7 +15,7 @@ export default function Appetizers() {
     });
   }, []);
 
-  //filters out all data that isnt 
+  //filters out all data that isnt in the appetizer category
   const appItems = appetizers.filter((item) => item.category === "Appetizer");
 
   //returns the displayed data
