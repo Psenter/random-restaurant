@@ -1,37 +1,14 @@
+import React from "react";
+
 //exports my navbar to be rendered on the DOM
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-lightblue">
-      <a className="navbar-brand"></a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div
-        className="collapse navbar-collapse justify-content-center"
-        id="navbarNavDropdown"
-      >
-        <ul className="navbar-nav border-bottom border-dark text-dark">
-          <li className="nav-item active ps-2 pe-2">
-            <a className="nav-link text-dark">Home</a>
-          </li>
-          <li className="nav-item ps-2 pe-2">
-            <a className="nav-link text-dark">Appetizers</a>
-          </li>
-          <li className="nav-item ps-2 pe-2">
-            <a className="nav-link text-dark">Lunch</a>
-          </li>
-          <li className="nav-item ps-2 pe-2">
-            <a className="nav-link text-dark">Dinner</a>
-          </li>
-        </ul>
+    <nav className="navbar bg-lightblue">
+      <div className="container justify-content-center">
+        <button className="border-bottom border-dark ps-3 pe-3">Home</button>
+        <button className="border-bottom border-dark ps-3 pe-3">Appetizers</button>
+        <button className="border-bottom border-dark ps-3 pe-3">Lunch</button>
+        <button className="border-bottom border-dark ps-3 pe-3">Dinner</button>
       </div>
     </nav>
   );

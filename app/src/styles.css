@@ -14,3 +14,8 @@ body {
 .text-color-lb {
     color: #cbeaf0;
 }
+
+button {
+    background: none;
+    border: none;
+}
