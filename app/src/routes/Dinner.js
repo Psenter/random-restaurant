@@ -4,19 +4,18 @@ import axios from "axios";
 
 //exports my function
 export default function Dinner() {
-  //sets state to the data
+  //sets state to show the dinner data
   const [dinner, setDinner] = useState([]);
 
-  
   useEffect(() => {
     //makes the call to the API
     axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
-      //sets setAppetizers to the data from API
+      //sets setDinner to the data from API
       setDinner(response.data);
     });
   }, []);
 
-  //filters out all data that isnt 
+  //filters out all data that isnt in the dinner category
   const dinnerItems = dinner.filter((item) => item.category === "Dinner");
 
   //returns the displayed data
