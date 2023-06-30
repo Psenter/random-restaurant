@@ -3,7 +3,7 @@ export default function Header() {
   return (
     <div className="bg-lightblue">
       <div className="container justify-content-center text-center pb-3 bg-lightblue">
-        <img src={"img/icon.PNG"} className="small-icon" />
+        <img src={"app\public\img\icon.PNG"} className="small-icon" />
         <div className="row">
           <div className="col">
             Hours open:<br></br>Mon: 11am - 9pm Tues: 11am - 9pm<br></br>Wed:
