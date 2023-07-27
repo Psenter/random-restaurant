@@ -9,7 +9,7 @@ export default function Appetizers() {
 
   useEffect(() => {
     //makes the call to the API
-    axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
+    axios.get("http://127.0.0.1:8000/menu/menu/").then((response) => {
       //sets setAppetizers to the data from API
       setAppetizers(response.data);
     });

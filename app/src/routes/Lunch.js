@@ -10,7 +10,7 @@ export default function Lunch() {
   //useEffect is a hook that allows me to fetch data
   useEffect(() => {
     //makes the call to the API
-    axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
+    axios.get("http://127.0.0.1:8000/menu/menu/").then((response) => {
       //sets setLunch to the data from API
       setLunch(response.data);
     });

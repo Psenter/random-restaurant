@@ -9,7 +9,7 @@ export default function Dinner() {
 
   useEffect(() => {
     //makes the call to the API
-    axios.get("https://www.jsonkeeper.com/b/MDXW").then((response) => {
+    axios.get("http://127.0.0.1:8000/menu/menu/").then((response) => {
       //sets setDinner to the data from API
       setDinner(response.data);
     });
